@@ -49,13 +49,15 @@ sudo service snapd start ;
 sudo go get -u github.com/ffuf/ffuf ;
 sudo cp /root/go/bin/ffuf /usr/bin/ffuf ;
 
-sudo pip3 install wfuzz ;
+sudo apt install wfuzz ;
 
 sudo go get -u github.com/tomnomnom/assetfinder ;
 sudo cp /root/go/bin/assetfinder /usr/bin/assetfinder ;
 
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder ;
 sudo cp /root/go/bin/subfinder /usr/bin/subfinder ;
+sudo mkdir /root/.config/ ;
+sudo mkdir /root/.config/subfinder ;
 sudo echo 'resolvers:
     - 1.1.1.1:53
     - 1.0.0.1:53
@@ -163,9 +165,9 @@ sudo cp /root/go/bin/anew /usr/bin/anew ;
 sudo snap install amass ;
 
 wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux ;
-chmod +x findomain-linux ;
-mv findomain-linux findomain ;
-mv findomain /usr/bin/ ;
+sudo chmod +x findomain-linux ;
+sudo mv findomain-linux findomain ;
+sudo mv findomain /usr/bin/ ;
 
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/chaos-client/cmd/chaos ;
 sudo cp /root/go/bin/chaos /usr/bin/chaos ;
@@ -173,7 +175,7 @@ sudo cp /root/go/bin/chaos /usr/bin/chaos ;
 sudo go get github.com/hakluke/haktrails ;
 sudo cp /root/go/bin/haktrails /usr/bin/haktrails ;
 sudo mkdir /root/.config/haktrails/ ;
-echo '
+sudo echo '
 securitytrails:
   key: ${securitytrails}
 ' > /root/.config/haktools/haktrails-config.yml ; 
@@ -187,7 +189,7 @@ sudo cp /root/go/bin/dnsx /usr/bin/dnsx ;
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx ;
 sudo cp /root/go/bin/httpx /usr/bin/httpx ;
 
-sudo go get -u github.com/sensepost/gowitness ;
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip;
 sudo cp /root/go/bin/gowitness /usr/bin/gowitness ;
 
 sudo go get github.com/tomnomnom/waybackurls ;
@@ -199,11 +201,13 @@ sudo cp /root/go/bin/gau /usr/bin/gau ;
 sudo GO111MODULE=on go get -u -v github.com/bp0lr/gauplus ;
 sudo cp /root/go/bin/gauplus /usr/bin/gauplus ;
 
-sudo go get -u github.com/tomnomnom/gf ;
+sudo go get -u -v github.com/tomnomnom/gf ;
 sudo cp /root/go/bin/gf /usr/bin/gf ;
 sudo mkdir /root/.gf ;
-echo 'source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash' >> /root/.bashrc ;
-cp -r $GOPATH/src/github.com/tomnomnom/gf/examples /root/.gf ;
+git clone https://github.com/tomnomnom/gf.git ;
+sudo mv gf /root/.gf/ ;
+sudo mv /root/.gf/gf/examples/* /root/.gf/ ;
+sudo rm -rf /root/.gf/gf/ ;
 
 git clone https://github.com/devanshbatham/ParamSpider ;
 sudo pip3 install -r ./ParamSpider/requirements.txt ;
@@ -222,15 +226,16 @@ rm -rf main.go ;
 mv main anti-burl ;
 mv anti-burl /usr/bin/ ;
 
+mkdir kr ;
+cd kr ;
 wget https://github.com/assetnote/kiterunner/releases/download/v1.0.2/kiterunner_1.0.2_linux_amd64.tar.gz ;
 tar -xvf kiterunner_1.0.2_linux_amd64.tar.gz ;
-mv kr /usr/bin/ ;
-rm -rf kiterunner_1.0.2_linux_amd64.tar.gz ;
-mkdir kr ;
-wget https://wordlists-cdn.assetnote.io/data/kiterunner/routes-large.kite.tar.gz
+sudo mv kr /usr/bin/ ;
+sudo rm -rf kiterunner_1.0.2_linux_amd64.tar.gz ;
+wget https://wordlists-cdn.assetnote.io/data/kiterunner/routes-large.kite.tar.gz ;
 tar -xvf routes-large.kite.tar.gz ;
-rm -rf routes-large.kite.tar.gz ;
-mv routes-large.kite ./kr/ ;
+sudo rm -rf routes-large.kite.tar.gz ;
+cd .. ;
 
 git clone https://github.com/obheda12/GitDorker.git ;
 sudo pip3 install -r ./GitDorker/requirements.txt ;
@@ -254,5 +259,5 @@ echo '
 | _|| |   \| (_-<   \/ -_) _` |  | ||   \(_-<  _/ _` | | / _` |  _| / _ \   \ 
 |_| |_|_||_|_/__/_||_\___\__,_| |___|_||_/__/\__\__,_|_|_\__,_|\__|_\___/_||_|
     															
-    															 by 4n0nyx
+    									by 4n0nyx
 '
