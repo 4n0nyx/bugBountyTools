@@ -14,7 +14,7 @@ echo '
                          
 ' 
 echo -e '\e[1;31mThe following tools will be installed: 
-ffuf, wfuzz, assetfinder, subfinder, anew, amass,findomain,chaos, haktrails, github-search, dnsx, httpx, gowitness, waybackurls, 
+ffuf, wfuzz, assetfinder, subfinder, anew, amass,findomain,chaos, haktrails, github-search, dnsx, httpx, waybackurls, 
 gau, gauplus, gf, unfurl,arjun, paramSpider, subjs, anti-burl, kiterunner, gitDorker, nuclei, dalfox, jsscanner.\n\n\e[0m' ;
 
 echo -e '\e[1;32mUpdating system...\n\e[0m' ;
@@ -57,8 +57,8 @@ sudo cp /root/go/bin/assetfinder /usr/bin/assetfinder ;
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder ;
 sudo cp /root/go/bin/subfinder /usr/bin/subfinder ;
 sudo mkdir /root/.config/ ;
-sudo mkdir /root/.config/subfinder ;
-sudo echo 'resolvers:
+sudo mkdir /root/.config/subfinder/ ;
+sudo echo "resolvers:
     - 1.1.1.1:53
     - 1.0.0.1:53
     - 8.8.8.8:53
@@ -157,7 +157,7 @@ threatbook: []
 urlscan: []
 virustotal: []
 zoomeye: []
-subfinder-version: 2.4.8' > /root/.config/subfinder/config.yaml ;
+subfinder-version: 2.4.8" > /root/.config/subfinder/config.yaml ;
 
 sudo go get -u github.com/tomnomnom/anew ;
 sudo cp /root/go/bin/anew /usr/bin/anew ;
@@ -188,9 +188,6 @@ sudo cp /root/go/bin/dnsx /usr/bin/dnsx ;
 
 sudo GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx ;
 sudo cp /root/go/bin/httpx /usr/bin/httpx ;
-
-wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip;
-sudo cp /root/go/bin/gowitness /usr/bin/gowitness ;
 
 sudo go get github.com/tomnomnom/waybackurls ;
 sudo cp /root/go/bin/waybackurls /usr/bin/waybackurls ;
