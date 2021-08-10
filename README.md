@@ -2,9 +2,7 @@
 
 ## Tools Included
 
-ffuf, wfuzz, assetfinder, subfinder, anew, amass, findomain, chaos, haktrails, github-search, dnsx,
-httpx, gowitness, waybackurls, gau, gauplus, gf, unfurl, arjun, paramSpider, subjs, anti-burl, 
-kiterunner, gitDorker, nuclei, dalfox, jsscanner.
+ffuf, wfuzz, assetfinder, subfinder, anew, amass, findomain, chaos, haktrails, github-search, dnsx,httpx, waybackurls, gau, gauplus, gf, unfurl, arjun, paramSpider, subjs, anti-burl, kiterunner, gitDorker, nuclei, dalfox, jsscanner.
 
 ## How To Use
 ```
