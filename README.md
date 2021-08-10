@@ -13,7 +13,7 @@ kiterunner, gitDorker, nuclei, dalfox, jsscanner.
 $ git clone https://github.com/4n0nyx/bugBountyTools.git
 $ cd bugBountyTools
 $ chmod +x bugBountyTools.sh
-$ ./bugBountyTools.sh
+$ sudo ./bugBountyTools.sh
 ```
 
 * If you have apiKeys, set existing variables or create new ones!!
