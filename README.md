@@ -1,4 +1,4 @@
-<h4 align="center">BugBountyTools</a>.</h4>
+<h1 align="center">BugBountyTools</a></h1>
 
 ## Tools Included
 
