@@ -1,4 +1,4 @@
-<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">BugBountyTools</a>.</h4>
+<h4 align="center"><a href="http://electron.atom.io" target="_blank">BugBountyTools</a>.</h4>
 
 ## Tools Included
 
