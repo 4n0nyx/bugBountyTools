@@ -6,7 +6,7 @@ ffuf, wfuzz, assetfinder, subfinder, anew, amass, findomain, chaos, haktrails, g
 
 ## How To Use
 ```
-$ git clone https://github.com/4n0nyx/bugBountyTools.git
+$ git clone https://github.com/4n0nyx/bugBountyTools
 $ cd bugBountyTools
 $ chmod +x bugBountyTools.sh
 $ sudo ./bugBountyTools.sh
